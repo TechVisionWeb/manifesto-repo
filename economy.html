@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html class="overscroll-none  scroll-smooth " lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+ <header class="header fixed top-0 inset-x-0 mx-auto w-full h-auto max-w-[1200px] min-w-[320px] bg-white z-10
+">
+    <nav class=" w-full z-20 top-0 start-0 border-b border-default">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 ">
+
+        <button data-collapse-toggle="navbar-sticky" type="button"
+          class="block items-center active:border-0! p-2 w-10 h-10  top-[0px] relative justify-center text-sm text-body rounded-base lg:hidden   hover:text-heading focus:outline-none focus:ring-1  "
+          aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-[20px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+          </svg>
+        </button>
+        <a href="index.html"  aria-label="home page link"class="flex justify-center items-center space-x-3 rtl:space-x-reverse h-10">
+          <img src="./imgs/logo.png" class="h-7 shadow-sm  shadow-gray-950 rounded-full"
+            alt="Wake UP UK Logo  writing as W img">
+          <span class=" hidden sm:flex flex-end whitespace-nowrap h-full items-end"><img src="./imgs/WakeUpUk.png"
+              class="h-7" alt="Wake UP UK Logo  writing as img"></span>
+        </a>
+        <div class="flex sm:flex-row lg:order-2  space-x-3 md:space-x-0 rtl:space-x-reverse  mx-0  ">
+          <ul
+            class="flex flex-row   font-medium  rounded-base  md:space-x-8 rtl:space-x-reverse md:flex-row  md:border-0  ">
+            <li class=" px-0.5 md:mx-2">
+              <a href="#"
+                class="block py-2 px-3 text-heading rounded-full   hover:bg-black hover:text-yellow-500  shadow-sm  shadow-gray-950  bg-yellow-400 ">Sign
+                the Petition</a>
+            </li>
+
+
+          </ul>
+
+        </div>
+        <div class="items-center justify-between hidden w-full lg:flex lg:w-auto md:order-1 gap-10  mt-1.5  "
+          id="navbar-sticky">
+          <ul class="  text-sm text-body font-bold list-none ">
+            <li class="flex flex-col sm:flex-row w-full justify-between text-[16px]">
+              <button
+                class="flex  flex-row block hover:underline underline-offset-4  justify-center items-center cursor-pointer p-1 border sm:border-none"
+                id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover"
+                class="block items-center block py-2 px-3 text-heading rounded  md:hover:bg-transparent md:border-0 md:hover:text-fg-brand lg:p-0 md:dark:hover:bg-transparent"
+                type="button">
+
+
+                Home
+                <svg class="w-4 h-4 ms-1.5 -me-0.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+
+              </button>
+
+              <button
+                class="flex  flex-row block hover:underline underline-offset-4  justify-center items-center cursor-pointer p-1 border sm:border-none"
+                id="aboutDropdownHoverButton" data-dropdown-toggle="aboutDropdownHover" data-dropdown-trigger="hover"
+                class="block items-center block py-2 px-3 text-heading rounded   md:hover:bg-transparent md:border-0 md:hover:text-fg-brand lg:p-0 md:dark:hover:bg-transparent"
+                type="button">
+
+
+                About
+                <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+
+              </button>
+
+              <button
+                class="flex  flex-row block hover:underline underline-offset-4  justify-center items-center cursor-pointer p-1 border sm:border-none"
+                id=" mainfestoDropdownHover" data-dropdown-toggle="mainfestoDropdownHover" data-dropdown-trigger="hover"
+                class="block items-center block py-2 px-3 text-heading rounded   md:hover:bg-transparent md:border-0 md:hover:text-fg-brand lg:p-0 md:dark:hover:bg-transparent"
+                type="button">
+
+
+                Manifesto
+                <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+
+              </button>
+
+              <button
+                class="flex  flex-row block hover:underline underline-offset-4  justify-center items-center cursor-pointer p-1 border sm:border-none"
+                id="involvedDropdownHoverButton" data-dropdown-toggle="involvedDropdownHover"
+                data-dropdown-trigger="hover"
+                class="block items-center block py-2 px-3 text-heading rounded   md:hover:bg-transparent md:border-0 md:hover:text-fg-brand lg:p-0 md:dark:hover:bg-transparent"
+                type="button">
+
+
+                Get Involved
+                <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+
+              </button>
+
+
+              <button
+                class="flex  flex-row block hover:underline underline-offset-4  justify-center items-center cursor-pointer p-1 border sm:border-none"
+                id="involvedDropdownHoverButton" data-dropdown-toggle="contactDropdownHover"
+                data-dropdown-trigger="hover"
+                class="block items-center block py-2 px-3 text-heading rounded  md:hover:bg-transparent md:border-0 md:hover:text-fg-brand lg:p-0 md:dark:hover:bg-transparent"
+                type="button">
+
+
+                Contact
+                <svg class="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 9-7 7-7-7" />
+                </svg>
+
+              </button>
+
+
+
+
+
+            </li>
+          </ul>
+          <div
+            class="z-10 hidden font-bold p-1 lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative lg:absolute! max-[1024px]:!transform-[translate3d(0px,0px,0px)] border border-default-medium rounded-base shadow-lg rounded"
+            id="dropdownHover">
+            <ul class="  text-body font-bold list-none p-1   " aria-labelledby="dropdownHoverButton">
+              <li class="mx-auto w-full relative border-b">
+                <a href="index.html"
+                  class="block items-center justify-center p-2 hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 " href="#index.html">Home</a>
+
+              </li>
+              <li class="mx-auto w-full relative border-b">
+
+                <a 
+                  class="block items-center justify-center p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4   p-2  " href="#capping-political-donations-section" >Capping Political Donations </a>
+              </li>
+              <li class="mx-auto w-full relative    ">
+
+                <a  
+                  class="block items-center justify-center p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 " href="#the-solution">The Solution for Funding</a>
+              </li>
+
+
+
+
+            </ul>
+          </div>
+
+
+          <ul id="aboutDropdownHover"
+            class="z-10 hidden font-bold p-1 lg:w-fit!  overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative lg:absolute! max-[1024px]:!transform-[translate3d(0px,0px,0px)] border border-default-medium rounded-base shadow-lg rounded">
+
+
+            <li class="mx-auto w-full relative border-b">
+              <a href="manifest-without-a-party.html"
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Manifesto
+                Without a Party</a>
+            </li>
+            <li class="mx-auto w-full relative border-b">
+              <a href=""
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Our
+                Mission</a>
+            </li>
+
+            <li class="mx-auto  relative ">
+              <a href="#"
+                class="block items-center hover:underline p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Team</a>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+          <ul id="mainfestoDropdownHover"
+            class="z-10 hidden font-bold p-1 lg:w-fit!   overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative lg:absolute! max-[1024px]:!transform-[translate3d(0px,0px,0px)] border border-default-medium rounded-base shadow-lg rounded   ">
+
+
+            <li class="mx-auto w-full relative border-b ">
+
+              <a href="regaining-trust-in-ourselves.html"
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Regaining
+                Trust</a>
+            </li>
+
+            <li class="mx-auto w-full relative border-b">
+
+              <a href="buying-votes.html"
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Buying
+                Votes</a>
+            </li>
+
+            <li class="mx-auto -full relative border-b">
+              <a href="health.html"
+                class="block items-center  p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Health</a>
+            </li>
+
+
+            <li class="mx-auto w-full relative border-b">
+
+              <a href="spirit-clause.html"
+                class="block items-center    hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Spirit
+                Clause
+              </a>
+            </li>
+
+            <li class="mx-auto w-full relative border-b">
+
+              <a href="housing.html"
+                class="block items-center    hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">Housing</a>
+            </li>
+
+            <li class="">
+
+              <a href="migration.html"
+                class="block items-center    hover:text-heading mx-auto w-fit hover:underline underline-offset-4 p-2 ">
+                Migration</a>
+            </li>
+
+
+
+
+          </ul>
+
+
+          <ul id="involvedDropdownHover"
+            class="z-10 hidden font-bold p-1 lg:w-fit!   overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative lg:absolute! max-[1024px]:!transform-[translate3d(0px,0px,0px)] border border-default-medium rounded-base shadow-lg rounded">
+
+            <li class="mx-auto w-full relative border-b">
+
+              <a href="#"
+                class="block items-center rounded-full  p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 ">Sign
+                the
+                petition</a>
+            </li>
+            <li class="mx-auto w-full relative border-b">
+              <a href="#"
+                class="block items-center  p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 ">Volunteer</a>
+            </li>
+
+            <li class="mx-auto w-full relative border-b">
+              <a href="#"
+                class="block items-center  p-2  hover:text-heading mx-auto w-fit hover:underline underline-offset-4 ">Subscribe
+              </a>
+            </li>
+
+            <li class="mx-auto w-full relative ">
+              <a href="#"
+                class="block items-center  p-2  hover:text-heading mx-auto w-fit  hover:underline underline-offset-4 ">Share
+                the
+                Campaign</a>
+            </li>
+
+
+          </ul>
+
+
+          <ul id="contactDropdownHover"
+            class="z-10 hidden font-bold p-1 lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative lg:absolute! max-[1024px]:!transform-[translate3d(0px,0px,0px)] border border-default-medium rounded-base  rounded">
+
+            <li class="mx-auto w-full relative border-b">
+
+              <a href="mailto:user@example.com"
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 ">Email
+                Us</a>
+            </li>
+
+            <li class="mx-auto w-full relative  border-b">
+
+              <a href="#"
+                class="block items-center  p-2   hover:text-heading mx-auto w-fit hover:underline underline-offset-4 ">Press
+                Enquires</a>
+            </li>
+
+
+
+
+
+            <li class="mx-auto w-full relative">
+
+              <div class="flex   flex-col  items-center justify-center  p-1">
+
+                <a class="flex mr-2 shadow-sm shadow-gray-950 flex-row items-center justify-center rounded-full radius border-[2px] w-[30px] h-[30px] border-black w-[200px] "
+                  href="#" aria-label="Facebook page link" src="#">
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                    </svg>
+                  </span>
+                </a>
+                <a class="flex my-1.5 mr-2 shadow-sm shadow-gray-950 flex-row items-center justify-center rounded-full radius border-[2px] w-[30px] h-[30px] border-black w-[200px] "
+                  href="#"  aria-label="Instagram page link" src="#">
+                  <span class="[&>svg]:h-5 [&>svg]:w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                  </span>
+                </a>
+                <a class="flex mr-2 shadow-sm shadow-gray-950 flex-row items-center justify-center rounded-full radius border-[2px] w-[30px] h-[30px] border-black w-[200px] "
+                  href="#"   aria-label="Twitter page link" src="#">
+                  <span class="[&amp;&gt;svg]:h-5 [&amp;&gt;svg]:w-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                      </path>
+                    </svg>
+                  </span>
+                </a>
+
+
+              </div>
+            </li>
+
+
+
+
+
+
+    </nav>
+  </h,eader>
+    <main class="relative w-full block h-full bg-white max-w-[1200px] min-w-[320px]  mx-auto pt-[48px] ">
+
+
+        <div class="hero flex flex-col lg:flex-row relative w-full z-0  justify-center items-center bg-blue-950">
+
+
+      <div class=" z-2  p-1  bg-blue-950 w-fit   md:w-[620px]! sm:absolute! lg:relative! ">
+
+                <h1 class=" text-white p-0! leading-1 pt-1  font-bold
+"> #Economy </h1>
+                <h3 class=" text-white "> Manifesto Section to <br>Reform <span class="italic">Our </span>UK Democracy
+                </h3>
+                <h4 class=" text-yellow-400   "> Yes, it's a Mess. <br>
+                    But it's not too Late!
+                </h4>
+                <div class="flex  mt-4 flex-row w-full max-w-[320px] md:max-w-[356px]! justify-between ">
+                    <a href="#"
+                        class="pb-1 flex items-center justify-center block py-1 px-1 w-fit text-heading rounded-full  t-[20px] font-semibold   hover:bg-black hover:text-yellow-500  shadow-sm  shadow-gray-950  bg-yellow-400 ">Sign
+                        the Petition</a>
+
+
+
+                    <a href="https://wa.me/?text=Take%20back%20your%20UK%20democracy%20by%20signing%20the%20WakeUPUK%20petition%20%20www.linkToSite.com"
+                        class="block py-2 flex items-center z-2   text-gray-800 dark:text-white  font-semibold  rounded-full justify-center hover:bg-black   hover:text-black  shadow-sm  shadow-gray-950  bg-blue-800  text-white w-[55px] flex flex-row"><svg
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" aria-label="Whatsapp share link"
+                            width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path fill="white" fill-rule="evenodd"
+                                d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                                clip-rule="evenodd" />
+
+                            <path fill="white"
+                                d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z" />
+                        </svg>
+                        &nbsp;
+                        <svg class="w-[18px] text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="white" stroke-linecap="round" stroke-width="2"
+                                d="M7.926 10.898 15 7.727m-7.074 5.39L15 16.29M8 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm12 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0-11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                        </svg>
+                    </a>
+
+
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=www.linkToSite.com?text=hello"
+                        aria-label="Facebook share link"
+                        class="block py-2  z-2 flex items-center  font-semibold  justify-center rounded-full   hover:bg-black   hover:text-black  shadow-sm  shadow-gray-950  bg-blue-800  text-white  w-[55px] flex flex-row"
+                        href="www.facebook.com" target="_blank" rel="noopener">
+                        <svg class="w-[18px] text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg class="w-[18px] text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="white" stroke-linecap="round" stroke-width="2"
+                                d="M7.926 10.898 15 7.727m-7.074 5.39L15 16.29M8 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm12 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0-11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.x.com/intent/tweet?text=Take%20back%20your%20democracy%20by%20signing%20the%20WakeUPUK%20petition&url=https://www.linkToSite.com"
+                        aria-label="X share link" target="_blank" rel="noopener"
+                        class="block py-2  z-2  flex items-center  justify-center font-semibold  rounded-full   hover:bg-black hover:text-black  shadow-sm  shadow-gray-950  bg-blue-800  text-white  w-[55px] flex flex-row"
+                        href="www.facebook.com" target="_blank" rel="noopener">
+                        <svg class="w-[18px] text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
+                        </svg>
+
+                        <svg class="w-[18px] text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="white" stroke-linecap="round" stroke-width="2"
+                                d="M7.926 10.898 15 7.727m-7.074 5.39L15 16.29M8 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm12 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0-11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                        </svg>
+                    </a>
+
+
+
+                </div>
+                <div class="grid grid-cols-8 gap-2 flex items-center justify-center w-full my-4  ">
+                    <label for="Copy-Petition-link" class="sr-only">Petition link</label>
+                    <input id="Copy-Petition-link" type="text"
+                        class="col-span-6 border border-default-medium text-body text-sm rounded-sm   block w-full px-3 py-2.5 shadow-xs placeholder:text-body"
+                        value="https://petition.parliament.uk/petitions/000000" disabled readonly>
+                    <button data-copy-to-clipboard-target="Copy-Petition-link"
+                        class="flex cursor-link hover:bg-black items-center justify-center h-10! w-[65px]! text-white bg-brand bg-blue-800 box-border border border-transparent   shadow-xs font-medium    w-fit   rounded-sm  shadow-sm  shadow-gray-950      ">
+                        <span class=" w-[65px]!    " id="default-message">Copy</span>
+                        <span id="success-message" aria-hidden="true" class="hidden w-[65px]!">
+
+                            Copied!
+
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+      <div class="w-full   relative hidden sm:relative  sm:block">
+
+                <div class="   w-full h-full absolute bg-blue-950/50  z-1 "> </div>
+
+                <img class="hero__bg-img  z-2   h-full" src="./imgs/palace-530055_1280.jpg" />
+
+
+            </div>
+        </div>
+
+        <div class="h-15 -mt-15" id="capping-political-donations-section"></div>
+        <section class="p-1 ">
+            <h4 class="w-full p-2 relative text-center bg-[#F8D444] font-bold my-1 shadow-sm shadow-black">The Current
+                UK Economy </h4>
+            <div class="w-full flex items-center  [@media(max-width:700px)]:flex-col! flex-row    ">
+
+                <div class="w-full">
+                    <p class="p-1 "> For the year 2023-24 there was a big black hole in spending. the UK Income tax and
+                        non tax income was £1.06 trillion.
+                        For the same year the UK Government spend was £1.23 trillion. The deficit was £132.2 billion.
+                    </p>
+
+                    <p class="p-1 "> The UK current debt is £2.72 trillion which is now 101.3% of UK GDP.
+                        The annual interest paid is £104.9 billion which is 8.2% of the total government
+                        income. An optimistic forecast made by the government on future borrowing is:</p>
+
+                    <ol class="list-[numerals]   list-inside ml-7 -indent-5.5">
+                        <li> 2025–26: £137.3 billion</li>
+                        <li> Corporations</li>
+                        <li> Trade unions</li>
+                        <li> Lobbyists with specific interests</li>
+                    </ol>
+                </div>
+                <figcaption class="w-full md:w-[90%]! p-1">
+                    <img class="w-full" src="./imgs/EconomyUK.jpg" />
+                </figcaption>
+            </div>
+            <p class="p-1 ">This relies on government stable interest rates, spending less and UK economic
+                growth. Alongside this challenge is our ageing population and low birth rates.</p>
+            <ol class="list-[numerals]   list-inside ml-7 -indent-5.5">
+                <li>By 2030 20% of the UK population will be over 65 putting increasing pressure on the public
+                    finances
+                    through pensions, health and care costs.</li>
+                <li>In 2025-21% are under18; 62% are working and aged between 18-64; and 17% are 65 and over.
+                </li>
+                <li> In 2030-20% are under18; 60% are working and aged between 18-64; and 20% are 65 and over.
+                </li>
+            </ol>
+
+            <p class="p-1 ">The result of this demographic change is that there is forecast to be a further gap
+                between
+                income and expense of £20-30 billion annually by 2030.</p>
+
+            </div>
+        </section>
+        <section class="w-full border-gray-200 border-[1px]  p-1  my-10">
+            <div class="flex flex-row relative items-between w-full    py-1  ">
+                <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+
+
+                <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">How are the government
+                    tacking these challenges?
+                </h5>
+            </div>
+            <div class="w-full flex items-center  [@media(max-width:700px)]:flex-col! flex-row    ">
+                <div class="w-full">
+                    <p class=" p-1">
+                        In the spring 2025 statement the following initiatives were stated.
+                        The UK government’s main economic initiatives include:
+                    </p>
+                    <ul class="list-[numerals] list-inside ml-7 -indent-5.5">
+                        <li> Infrastructure: Investing £13 billion in infrastructure and training 60,000 skilled
+                            workers.
+                        </li>
+
+
+                        <li> Housing: Allocating £2 billion for social housing and enabling 170,000 new homes.
+                        </li>
+                        <li> Defence: Increasing defence spending to 2.5% of GDP by 2027.
+                        </li>
+                        <li> Tax Reforms: Tackling tax avoidance and adjusting welfare spending.</li>
+                        <li> Green Economy: Aiming for 95% clean power by 2030 and supporting green technologies.
+                        </li>
+                        <li> Regional Growth: Fostering local investments and strategic partnerships. </li>
+                        <li> Economic Stability: Maintaining fiscal sustainability and supporting growth. </li>
+
+                    </ul>
+                </div>
+                <figcaption class="w-full md:w-[90%]! p-1">
+                    <img class="w-full" src="./imgs/budget.jpg" />
+                </figcaption>
+            </div>
+        </section>
+
+
+        <section
+            class="flex flex-col relative items-between w-full    py-1  items-center   border-gray-200 border-[1px]">
+            <div class="flex flex-row items-between w-full gap-[50px] p-1">
+                <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+                <h5 class=" w-fit   text-left  relative bg-white font-bold">Are they enough?
+                </h5>
+            </div>
+            <div class="w-full flex items-center  [@media(max-width:700px)]:flex-col! flex-row    ">
+                <div class="w-full">
+
+                    <p class="  p-1"> Maybe? </p>
+                    <p class="  p-1">We could have some unforeseen bit of good fortune which seems to have been the
+                        usual reason for the UK economy to growing quickly in the past.
+                        Historically successful government initiatives have often been “short term gain for long
+                        term pain”
+
+                    </p>
+
+                    <p class="  p-1"> The UK's past economic growth has largely been driven by deregulation and
+                        public borrowing, both of which have provided short-term benefits but created long-term
+                        challenges:</p>
+
+                    <ul class="list-[circle]   list-inside ml-7 -indent-5.5">
+                        <li> Deregulation: Increased investment and business activity, especially in finance, but
+                            led to greater financial instability (e.g., 2008 crisis) and rising costs in privatised
+                            sectors.</li>
+                        <li> Public Borrowing: Stimulated economic growth and prevented recessions, but resulted in
+                            high national debt, limiting future spending options.</li>
+
+                    </ul>
+                    <p class=" p-1">The key debate is whether the UK should continue relying on these strategies or
+                        shift toward structural reforms that promote sustainable growth. </p>
+                    <p class=" p-1"> Do we now need to be more proactive and ambitious and own/control our future?
+                        I think we may now need plans that are more tangible and measurable. We maybe need to be
+                        innovative and try something new to relaunch UK business.</p>
+
+                    <p class=" p-1 font-semibold"> Time to “think outside of the box” and try some innovative
+                        initiatives that may make the difference..? </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="flex flex-col   my-10 items-center   p-1">
+            <div class="w-full  mb-10  ">
+                <div class="flex flex-row items-between w-full   ">
+                    <h4 class="w-full p-2 relative text-center bg-[#F8D444] font-bold mt-1  shadow-sm shadow-black">
+                        1. The UK National Innovation Fund
+
+                    </h4>
+                </div>
+                <section class="w-full mb-10   p-1 border-gray-200 border-[1px]">
+                    <div class="flex flex-row relative items-between w-full    py-1  ">
+
+
+                        <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+
+                        <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">
+
+                            Summary
+
+                        </h5>
+                    </div>
+                    <p class=" p-1"> The UK National Innovation Fund is a public private investment vehicle that
+                        deploys <span class="font-semibold">£5.0 billion </span>of
+                        investable capital to back UK startups and scaling companies. The government provides<span
+                            class="font-semibold"> £2.0 billion</span>
+                        and private investors provide <span class="font-semibold">£3.0 billion</span>. The fund
+                        follows private equity practice: management
+                        fees and a contingency reserve are paid from investment returns, and qualifying private
+                        investor
+                        distributions are tax free under strict rules. The design aims to maximise capital in the
+                        market,
+                        attract experienced managers, create skilled jobs across the country, and deliver a net
+                        benefit to
+                        the public purse when the fund performs.</p>
+                </section>
+                <section class="w-full  mb-10   border-gray-200 border-[1px]">
+                    <div class="flex flex-row relative items-between w-full    p-1  ">
+
+
+                        <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block  "> </div>
+
+                        <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">
+
+                            How the fund works
+
+                        </h5>
+                    </div>
+                    <p class=" p-1"> TThe fund pools <span class="font-semibold">£5.0 billion </span> and outsources
+                        investment
+                        decisions to proven venture capital and private equity managers selected
+                        through competition. When portfolio companies generate returns, the
+                        fund first pays <span class="font-semibold">management fees </span> and sets aside a <span
+                            class="font-semibold">contingency reserve </span>
+                        for losses. The remaining distributable returns are split pro rata
+                        between the government and private investors. Private investors
+                        receive tax free distributions only if they meet eligibility rules
+                        such as minimum holding periods and substance tests. The government’s
+                        receipts include its share of distributable returns plus additional
+                        tax revenue from new jobs, with clawbacks applied if agreed conditions are not met.</p>
+                </section>
+
+                <section class="w-full  mb-10   border-gray-200 border-[1px]">
+                    <div class="flex flex-row relative items-between w-full    p-1  ">
+
+
+                        <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+
+                        <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">
+
+                            Where the money goes
+                        </h5>
+                    </div>
+                    <p class=" p-1"> <span class="font-semibold">Sectors targeted </span>include green energy,
+                        technology and AI, life sciences, advanced manufacturing,
+                        and creative industries. <span class="font-semibold">Regions prioritised</span> include the
+                        North of England, the Midlands, Scotland and the South West.
+                        The fund aims to provide patient capital for companies that can scale, create high skill
+                        jobs and attract follow on private investment.</p>
+                </section>
+
+                <section class="w-full  mb-10   border-gray-200 border-[1px] p-1 ">
+                    <div class="flex flex-row relative items-between w-full   ">
+
+
+                        <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+
+                        <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">
+
+                            Financial modelling plain summary </h5>
+                    </div>
+                    <div class="flex flex-col items-between w-full    "></div>
+                    <p class=" p-1"> A simple five year model shows likely
+                        outcomes under three return scenarios. Key assumptions are transparent and
+                        changeable: <span class="font-semibold">£5.0 billion investable pool, management fees 1.5
+                            percent per year,
+                            contingency 5 percent of gross returns</span>, government share <span
+                            class="font-semibold">40 percent</span>, private
+                        share <span class="font-semibold">60 percent</span>, private returns tax free for qualifying
+                        investors, and
+                        illustrative job tax receipts.</p>
+
+
+                    <div class="relative overflow-x-auto  w-full    ">
+                        <table
+                            class=" border-separate border-spacing-0 border border-gray-200 !rounded-lg overflow-hidden mx-auto !w-[1000px] text-sm text-left rtl:text-right">
+                            <thead class="text-sm text-body  border-b-gray-200 border-b rounded-base border-default">
+                                <tr>
+
+                                    <th scope="col" class="px-6 py-3 font-medium">
+                                        Scenario
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 font-medium">
+                                        Gross returns five years
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 font-medium">
+                                        Fees five years
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 font-medium">
+                                        Contingency five</th>
+
+                                    <th scope="col" class="px-6 py-3 font-medium">
+
+                                        Government net five years
+
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class=" border-b-gray-200 border-b border-b-gray-200 border-default bg-blue-200 ">
+
+                                    <td class="px-6 py-4">
+                                        Conservative
+                                    <td class="px-6 py-4">
+                                        £1.25bn
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        £375m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        £62.5m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        +£1.23bn
+                                    </td>
+
+                                </tr>
+                                <tr class=" border-b-gray-200 border-b border-b-gray-200 border-default  ">
+
+                                    <td class="px-6 py-4">
+                                        Moderate
+                                    <td class="px-6 py-4">
+                                        £2.50bn
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        £375m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        £125m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        +£3.56bn
+                                    </td>
+
+                                </tr>
+                                <tr class=" border-b-gray-200 border-b border-b-gray-200 border-default bg-blue-200  ">
+
+                                    <td class="px-6 py-4">
+                                        Optimistic
+                                    <td class="px-6 py-4">
+                                        £3.75bn
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        £375m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        £187.5m
+                                    </td>
+
+                                    <td class="px-6 py-4">
+                                        +£4.89bn
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class=" p-1">The model treats fees and contingency as paid from gains rather than from extra
+                        public cash.
+                        Government net equals the government’s share of distributable returns plus job tax receipts
+                        minus the
+                        notional tax foregone on private returns and minus the £2.0 billion government investment. Even
+                        under
+                        the conservative scenario the model shows a positive net for the public purse because of job tax
+                        receipts and the government’s share of returns. Higher returns increase the public benefit
+                        substantially.</p>
+                </section>
+
+                <section class="w-full  mb-10   border-gray-200 border-[1px] p-1 ">
+                    <div class="flex flex-row relative items-between w-full   ">
+
+
+                        <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
+
+                        <h5 class=" w-fit  text-left  relative bg-white font-bold   ml-[50px] ">
+
+                            Plain takeaways and safeguards </h5>
+                    </div>
+                    <ul class="list-[circle]   list-inside ml-7 -indent-5.5">
+                        <li> The fund puts £5 billion to work in UK companies while managers are paid from the gains
+                            they generate.</li>
+                        <li> Public Borrowing: Stimulated economic growth and prevented recessions, but resulted in
+                            high national debt, limiting future spending options.</li>
+                        <li> Public Borrowing: Stimulated economic growth and prevented recessions, but resulted in
+                            high national debt, limiting future spending options.</li>
+                        <li> Safeguards include competitive manager selection, an independent investment committee,
+                            minimum holding periods, UK substance tests for portfolio companies,
+                            clawbacks for unmet commitments, fee and carry limits, and public reporting with independent
+                            audits.</li>
+                        <li> 	A pilot tranche of <span class="font-semibold">£500 million to £1 billion</span> is recommended to test the model, 
+                            demonstrate results and refine terms before scaling to the full investable pool.</li>
+                    </ul>
+                </section>
+                </ul>
+        </section>
+        </section>
+
+
+
+
+        </section>
+    </main>
+ <footer class="footer relative w-full block  max-w-[1200px] min-w-[320px]  sm:mx-auto bg-black text-white ">
+    <div>
+      <div class="flex flex-col md:flex-row w-full justify-between  ">
+
+        <div class="flex min-[400px]:flex-row! flex-col w-full">
+          <div class="p-4 flex flex-col w-full bg-gray-950    ">
+            <span class="text-yellow-400">About</span>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Manifesto Without a Party</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Our Mission</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Team</a>
+
+          </div>
+
+          <div class="p-4 flex flex-col w-full bg-gray-950    ">
+            <span class="text-yellow-400">Get Involved</span>
+            <a class="p-1 text-black w-[9rem] text-center font-[500] rounded-full  my-1 bg-yellow-400 hover:bg-black hover:text-yellow-500"
+              href="#" src="#">Sign the
+              Petition</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Volunteer</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Subscribe</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Share the Campaign</a>
+
+
+          </div>
+        </div>
+        <div class="flex min-[400px]:flex-row! flex-col w-full">
+
+          <div class="p-4 flex flex-col w-full bg-gray-950   ">
+            <span class="text-yellow-400">Truths and the Manifesto</span>
+            <a class=" hover:underline underline-offset-4  " href="#" src="#">Regaining Trust</a>
+            <a class=" hover:underline underline-offset-4  " href="#" src="#">Vote-Grabbing</a>
+            <a class=" hover:underline underline-offset-4  " href="#" src="#">Health</a>
+
+
+            <a class=" hover:underline underline-offset-4  " href="#" src="#">Spirit Clause</a>
+            <a class=" hover:underline underline-offset-4  " href="#" src="#">Housing</a>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Migration</a>
+
+
+          </div>
+
+          <div class="p-4 flex flex-col w-full bg-gray-950    ">
+            <span class="text-yellow-400">Contact</span>
+            <a class=" hover:underline underline-offset-4 " href="mailto:someone@example.com" src="#">Email Us</a>
+            <div class="flex   flex-row w-full justify-left  my-1">
+
+              <a class="flex mr-2 flex-row items-center justify-center  radius border-[1px] w-[30px] h-[30px] border-white rounded-full"
+                href="#" src="#">
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                  </svg>
+                </span>
+              </a>
+              <a class="flex mr-2 flex-row items-center justify-center  radius border-[1px] w-[30px] h-[30px] border-white rounded-full"
+                href="#" src="#">
+                <span class="[&>svg]:h-5 [&>svg]:w-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                  </svg>
+                </span>
+              </a>
+              <a class="flex   flex-row items-center justify-center  radius border-[1px] w-[30px] h-[30px] border-white rounded-full"
+                href="#" src="#">
+                <span class="[&amp;&gt;svg]:h-5 [&amp;&gt;svg]:w-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
+                    <path
+                      d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                    </path>
+                  </svg>
+                </span>
+              </a>
+
+
+            </div>
+            <a class=" hover:underline underline-offset-4 " href="#" src="#">Press inquires</a>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="flex p-4 mt-1 flex-col md:flex-row w-full justify-center bg-gray-950 ">
+        <span>
+          © 2025 Wake Up UK
+        </span>
+        <span>
+          &nbsp• Democracy is not for sale. <br class=" max-[370px]:block! min-[371px]:hidden!"> Let's prove it.
+        </span>
+      </div>
+
+
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

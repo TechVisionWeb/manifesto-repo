@@ -1,0 +1,27 @@
+h1{
+ font-size: clamp(3rem, 3vw, 3.5rem);
+ line-height: 1.5;
+}
+
+h3{
+  font-size: clamp(1.7rem, 2.2vw, 2.5rem) ;
+}
+
+h4{
+  font-size: clamp(1.5rem, 2.2vw, 2.0rem);
+
+}
+
+h5{
+  font-size: clamp(1.3rem, 2.2vw, 1.4rem);
+
+}
+ 
+ 
+q {
+  /* Defines curly double quotes for top level, single for nested */
+  font-family: Arial;
+}
+
+q::before { content: open-quote !important;}
+q::after { content: close-quote !important; }  
