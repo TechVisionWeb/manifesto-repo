@@ -3,18 +3,16 @@
     
     
     window.addEventListener('load', function() {
-    const clipboard = FlowbiteInstances.getInstance('CopyClipboard', 'Copy-Petition-link');
-    const $defaultMessage = document.getElementById('default-message');
-    const $successMessage = document.getElementById('success-message');
+     
 
-    clipboard.updateOnCopyCallback((clipboard) => {
-        $defaultMessage.classList.add('hidden');
-        $successMessage.classList.remove('hidden');
+           fetch("https://petition.parliament.uk/petitions/747234.json")
+           .then(response => response.json() )
+           .then(obj => {document.getElementById("signature-count").innerHTML
+             = obj.data.attributes.signature_count;  })
+             .catch(error => console.log(error));
 
-        // reset to default state
-        setTimeout(() => {
-            $defaultMessage.classList.remove('hidden');
-            $successMessage.classList.add('hidden');
-        }, 2000);
-    })}); 
+}
+
+
+); 
  
