@@ -48,7 +48,7 @@
           </ul>
 
         </div>
-        <div class="items-between justify-between w-full min-w-[600px] lg:flex lg:w-auto md:order-1 gap-10 p-1 mt-1.5 rounded-sm  bg-blue-950 border-radius-5px"
+        <div class="items-between justify-between w-full lg:min-w-[600px] lg:flex lg:w-auto md:order-1 gap-10 p-1 mt-1.5 rounded-sm  bg-blue-950 border-radius-5px"
           id="navbar-sticky">
           <ul class="  text-sm text-body font-bold list-none w-full">
             <li class="flex flex-col md:flex-row w-full justify-between items-between text-[16px]">
@@ -68,7 +68,7 @@
 
               </button>
               <div
-                               class="z-10 hidden font-bold   lg:w-fit! overflow-y-scroll   sm:h-auto! sm:overflow-y-visible! bg-white relative! md:absolute! transform md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  " 
+                               class="z-10 hidden font-bold   lg:w-fit! overflow-y-scroll   sm:h-auto! sm:overflow-y-visible! bg-white relative! md:absolute!  max-[767px]:relative! md:absolute      max-[767px]:transform-[translate3d(0px,0px,0px)]!  border border-default-medium   lg:rounded-sm shadow-lg   " 
 
                 id="dropdownHover">
                 <ul class="  text-body font-bold list-none   " aria-labelledby="dropdownHoverButton">
@@ -111,7 +111,7 @@
 
 
               <ul id="aboutDropdownHover"
-                              class="z-10 hidden font-bold   lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! transform md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  ">
+                              class="z-10 hidden font-bold   lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white  max-[767px]:relative! md:absolute      max-[767px]:transform-[translate3d(0px,0px,0px)]!  md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  ">
 
 
                 <li class="mx-auto w-full relative border-b">
@@ -147,7 +147,7 @@
 
               </button>
               <ul id="mainfestoDropdownHover"
-                class="z-10 hidden font-bold  bg-blue-800 lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! transform md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  ">
+                class="z-10 hidden font-bold  bg-blue-800 lg:w-fit! overflow-y-scroll   sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! max-[767px]:relative! md:absolute      max-[767px]:transform-[translate3d(0px,0px,0px)]! border border-default-medium   lg:rounded-sm shadow-lg  ">
                 
 
 
@@ -204,7 +204,7 @@
 
               </button>
               <ul id="involvedDropdownHover"
-                class="z-10 hidden font-bold  bg-blue-800 lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! transform md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  ">
+                class="z-10 hidden font-bold  bg-blue-800 lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! max-[767px]:relative! md:absolute      max-[767px]:transform-[translate3d(0px,0px,0px)]! border border-default-medium   lg:rounded-sm shadow-lg  ">
 
                 <li class="mx-auto w-full relative border-b">
 
@@ -248,7 +248,7 @@
 
               </button>
               <ul id="contactDropdownHover"
-                               class="flex flex-col py-2 px-3 z-10 hidden font-bold   lg:w-fit! overflow-y-scroll h-[130px] sm:h-auto! sm:overflow-y-visible! bg-white !relative md:absolute! transform md:transform-[translate3d(4px,80px,0px)]   lg:transform-[translate3d(0 , 0 ,0 )]! border border-default-medium   lg:rounded-sm shadow-lg  ">
+                               class="flex flex-col py-2 px-3 z-10 hidden font-bold   lg:w-fit! overflow-y-scroll  sm:h-auto! sm:overflow-y-visible! bg-white  md:absolute! max-[767px]:relative!   max-[767px]:transform-[translate3d(0px,0px,0px)]! border border-default-medium   lg:rounded-sm shadow-lg  ">
 
                 <li class="mx-auto w-full relative border-b">
 
@@ -1330,8 +1330,8 @@
             <span class="text-yellow-400">Contact</span>
             <a class=" hover:underline underline-offset-4 " href="mailto:someone@example.com" src="#">Email Us</a>
             <div class="flex   flex-row w-full justify-left  my-1">
-
-              <a class="flex mr-2 flex-row items-center justify-center  radius border-[1px] w-[30px] h-[30px] border-white rounded-full"
+              
+              <a class="flex mr-2 flex-row items-center justify-center  radius border-[1px] w-[30px] h-[30px] rounded-full"
                 href="#" src="#">
                 <span class="[&>svg]:h-5 [&>svg]:w-5">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 320 512">
