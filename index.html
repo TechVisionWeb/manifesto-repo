@@ -567,15 +567,18 @@
       </section>
 
 
-      <section class="flex flex-col relative items-between w-full    py-1  items-center   border-gray-200 border-[1px]">
+      <section class="flex flex-col  items-between w-full    py-1  items-center   border-gray-200 border-[1px]">
         <div class="flex flex-row items-between w-full gap-[50px] p-1">
           <div class="bg-blue-950 min-w-[20px]! w-[20px]! max-w-[20px]!   block "> </div>
           <h3 class=" w-fit   text-left  relative bg-white font-bold">Who’s Giving the Money?
           </h3>
         </div>
-        <div class="w-full flex items-center   flex-col justify-between  min-[1000px]:flex-row!       mt-2  ">
+        <div class="w-full justify-between  min-[1000px]:flex-row!   relative    mt-2  ">
 
-          <div class=" w-full bg-blue-200 border-[1px]   rounded p-3 mt-2 min-[500px]:w-[80%]!  min-[1000px]:w-[48%]!  bg-yellow-50 border-[1px] border-yellow-100 ">
+          
+          <figcaption class=" mt-2  flex items-center justify-center relative">
+
+            <div class=" w-full bg-blue-200 border-[1px] sm:absolute! relative  rounded p-3 mt-2 min-[500px]:w-[80%]!  min-[1000px]:w-[48%]!  bg-yellow-50 border-[1px] border-yellow-100 ">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewbox="-10 -10 540 540"
               class="w-[10%] h-[auto] inline-block ">
@@ -604,7 +607,7 @@
               <li class="rounded-full flex items-center justify-center  text-center p-2 mt-1 border-[1px] border-yellow-300"> Trade unions</li>
               <li class="rounded-full  flex items-center justify-center text-center  p-2 mt-1 border-[1px] border-yellow-300"> Lobbyists with specific interests</li>
             </ul>
-            <p class=" p-1">These donors often expect something in return: <br> </p>
+            <p class=" p-1">These donors often expect something in return for: <br> </p>
           <ul class="flex flex-col sm:flex-row gap-x-2 font-semibold">
               <li class="rounded-full flex items-center justify-center text-center p-2 mt-1 border-[1px] border-yellow-300"> Influence for decisions</li>
               <li class="rounded-full flex items-center justify-center  text-center p-2 mt-1 border-[1px] border-yellow-300"> Access to politicians</li>
@@ -612,8 +615,7 @@
              </ul>
          
           </div>
-          <figcaption class=" mt-2 min-[500px]:w-[70%]!  min-[1000px]:w-[48%]!  ">
-            <img class="w-full ! rounded" src="./imgs/annon-donations.jpg" />
+            <img class="w-full ! rounded   hidden sm:block" src="./imgs/annon-donations.jpg" />
           </figcaption>
         </div>
 
